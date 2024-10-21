@@ -77,7 +77,7 @@
 
 @media (width >= 768px) {
   .rec {
-  inset-inline-end: 28px;
+  inset-inline-end: 29px;
   inset-block-start: 20px;
   }
 }
@@ -86,7 +86,7 @@
   content: "REC";
   visibility: var(--rec, visible);
   color: var(--first-color, #ff0070);
-  line-height: 24px;
+  line-height: 25px;
 }
 
 .rec::after {
@@ -109,7 +109,7 @@
 
 @media (width = 768px) {
   .header__theme-menu-list {
-    margin-block: 162px;
+    margin-block: 172px;
   }
 }
 
@@ -136,9 +136,10 @@
 
 .header__theme-menu-button:focus {
   outline: none;
-  text-decoration: underline;
-  text-underline-position: under;
-  text-decoration-color: var(--first-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--first-color);
 }
 
 .header__theme-menu-button_active {
@@ -156,16 +157,25 @@
 }
 
 .main__title {
-  font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-size: 116px;
   line-height: 82.5%;
   color: var(--main-color, #db00ff);
   text-shadow: 4px 4px 0 var(--sh-color, #ff0070);
 }
 
+
+
 @media (width >= 768px) {
   .main__title {
     position: relative;
     right: 20px;
+    font-size: 120px;
+  }
+}
+
+@media (width >= 1024px) {
+  .main__title {
+    font-size: 157px;
   }
 }
 
@@ -176,7 +186,7 @@
   margin-block: 55px;
 }
 
-@media (width = 768px) {
+@media (width >= 768px) {
   .header__paragraph {
     justify-self: end;
     max-width: 364px;
@@ -184,9 +194,8 @@
   }
 }
 
-@media (width > 768px) {
+@media (width >= 1024px) {
   .header__paragraph {
-    justify-self: end;
     margin-block: 114px;
     max-width: 491px;
   }
@@ -252,12 +261,14 @@
 }
 
 .link:hover {
-  text-decoration: underline;
-  text-underline-position: under;
-  text-decoration-color: var(--text-color);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
   border: 1px solid var(--text-color);
 }
 
@@ -283,6 +294,7 @@
 
 .content__section-picture {
   display: grid;
+  gap: 10px;
   grid-template-columns: 1fr;
 }
 
@@ -300,6 +312,10 @@
 }
 
 @media (width >= 768px) {
+  .content__section-picture {
+    gap: 20px;
+  }
+
   .content__list-picture {
     gap: 20px;
     grid-template-columns: repeat(3, minmax(230px, 1fr));
@@ -329,6 +345,16 @@
 .footer {
   display: grid;
   min-block-size: 100vh;
-  padding: var(--padding, 20px);
+  /**padding: var(--padding, 20px);**/
   place-items: center;
+}
+
+.footer .main__title {
+  text-shadow: 2px 2px 0 var(--sh-color, #ff0070);
+}
+
+@media (width >= 768px) {
+  .footer .main__title {
+    right: 0;
+  }
 }

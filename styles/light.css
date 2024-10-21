@@ -4,22 +4,12 @@
   переключая тему
 */
 
-:root.theme-light {
-  --bg-image: url(../images/cover-image-light.png);
-  --main-color: #ffc2e6;
-  --first-color:  #353430;
-  --bg-color: #ff8dcb;
-  --text-color: #353430;
-  --sh-color: #ff0070;
-  --hover-border-color: rgb(50, 49, 45, 0.4);
-  --rec: hidden;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url(../images/cover-image-light.png);
   --main-color: #ffc2e6;
-  --first-color:  #353430;
+  --first-color: #353430;
+  --second-color: #353430;
   --bg-color: #ff8dcb;
   --text-color: #353430;
   --sh-color: #ff0070;
@@ -32,6 +22,7 @@
   --bg-image: url(../images/cover-image-light.png);
   --main-color: #ffc2e6;
   --first-color:  #353430;
+  --second-color: #353430;
   --bg-color: #ff8dcb;
   --text-color: #353430;
   --sh-color: #ff0070;
